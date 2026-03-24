@@ -1,49 +1,87 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tela de Login Responsiva</title>
-    <link rel="stylesheet" href="Layout.css/cadastro.css" />
+    <title>MAX-FROTA Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="layout.css/cadastro.css" />
   </head>
   <body>
     <main class="container">
-      <aside class="branding">
-        <h1>Enervision</h1>
-        <p>Bem-vindo de volta! Faça login formulário</p>
-      </aside>
-
       <section class="login">
+        <div class="logo">
+          MAX-FROTA
+          <img
+            class="logo-img"
+            src="https://img.freepik.com/vetores-premium/icone-de-camiao-isometrico-para-servico-de-entrega-global_1324816-18662.jpg"
+            alt="Logo"
+          />
+        </div>
+
+        <h1>Acesso ao Sistema</h1>
+        <p>Não tem uma conta?<a href="#"> Crie agora</a></p>
+
         <form>
-          <h2>Entrar na conta </h2>
-          <p>Bem-vindo de volta! Preencha seus dados.</p>
+          <label>E-mail</label>
+          <input type="email" placeholder="example@gmail.com" />
 
-          <div class="field">
-            <label for="email">E-mail</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="seu@email.com"
-              required
-            />
+          <label>Senha</label>
+          <div class="password-box">
+            <input type="password" placeholder="••••••" />
           </div>
 
-          <div class="field">
-            <label for="password">Senha</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Digite sua senha"
-              required
-            />
-          </div>
-          <div>
-            <a href="Recuperar senha">Esqueci a senha</a>
+          <div class="options">
+            <label><input type="checkbox" /> Lembre-se de mim</label>
+            <a href="#">Esqueceu a senha?</a>
           </div>
 
-          <button type="submit">Entrar</button>
+          <button class="btn-primary">Entrar</button>
+
+          <div class="divider">
+            <span>ou</span>
+          </div>
+
+          <button class="social google">
+            <i class="fa-brands fa-google"></i>
+            Continuar com o Google
+          </button>
+
+          <button class="social facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+            Continuar com o Facebook
+          </button>
         </form>
       </section>
+
+      <aside class="banner">
+        <div class="overlay"></div>
+
+        <div class="content">
+          <div class="card">
+            <h3>Controle total da sua frota</h3>
+            <p>
+              Monitore veículos, máquinas pesadas e manutenção em tempo real.
+            </p>
+            <button>Saiba mais</button>
+          </div>
+
+          <div class="text">
+            <h2>Gestão inteligente de ativos</h2>
+            <p>
+              Acompanhe desempenho, reduza custos operacionais e aumente a
+              produtividade da sua operação.
+            </p>
+          </div>
+        </div>
+      </aside>
     </main>
   </body>
 </html>

@@ -1,143 +1,208 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 body {
-  background-color: #f4f6f8;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: #f4f6f8;
 }
 
 .container {
-  width: 100%;
-}
-
-.branding {
-  display: none;
+  display: flex;
+  min-height: 100vh;
 }
 
 .login {
-  width: 100%;
-  padding: 2rem;
+  flex: 1;
+  background: #fff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 480px;
+  margin: auto;
+}
+
+.logo {
+  font-weight: 700;
+  color: #ffb800;
+  margin-bottom: 30px;
+  font-size: 22px;
+}
+.logo-img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 55px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #1c1c1c;
+}
+.login p {
+  color: #666;
+  margin-bottom: 25px;
+}
+.login a {
+  color: #ffb800;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 form {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
-}
-
-form h2 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  gap: 16px;
 }
 
 label {
-  font-size: 0.9rem;
+  font-size: 13px;
+  color: #555;
 }
-
 input {
-  padding: 0.8rem;
-  border-radius: 6px;
+  padding: 14px;
+  border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 14px;
 }
 
-button {
-  padding: 0.9rem;
+.password-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding-right: 10px;
+}
+.password-box input {
   border: none;
-  border-radius: 6px;
-  background-color: #05a222;
-  color: white;
-  font-size: 1rem;
+  flex: 1;
+}
+.password-box i {
+  color: #888;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0d6e00;
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
 }
 
-a {
+.btn-primary {
+  background: #ffb800;
+  color: #1c1c1c;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-primary:hover {
+  background: #e0a800;
+}
+
+.divider {
   text-align: center;
-  font-size: 0.9rem;
-  text-decoration: none;
-  color: #4f46e5;
+  position: relative;
+}
+.divider span {
+  background: #fff;
+  padding: 0 10px;
+  color: #aaa;
+}
+.divider::before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #eee;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: -1;
 }
 
-a:hover {
-  text-decoration: underline;
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  cursor: pointer;
+}
+.social:hover {
+  background: #f1f1f1;
+}
+
+.banner {
+  display: none;
 }
 
 @media (min-width: 1280px) {
-  .container {
-    display: flex;
-    min-height: 100vh;
-  }
-
-  .branding {
+  .banner {
     display: flex;
     flex: 1;
-    background: linear-gradient(135deg, #058f00, #1b2f00);
+    background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
     color: white;
+    position: relative;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    padding: 2rem;
+    padding: 60px;
   }
-
-  .branding h1 {
-    font-size: 2.5rem;
+  .overlay {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 184, 0, 0.08);
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
   }
-
-  .branding p {
-    font-size: 1.2rem;
-    margin-top: 1rem;
+  .content {
+    max-width: 420px;
   }
-
-  .login {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .card {
+    background: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
   }
-
-  form {
-    width: 100%;
-    max-width: 400px;
+  .card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .card button {
+    margin-top: 10px;
+    background: #ffb800;
+    color: #1c1c1c;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  .text h2 {
+    margin-bottom: 10px;
+  }
+  .text p {
+    color: #ccc;
   }
 }
 
-
 @media (min-width: 1920px) {
   .container {
-    max-width: 1600px;
-    margin: 0 auto;
+    max-width: 1400px;
+    margin: auto;
   }
-
-  form {
-    padding: 3rem;
-    gap: 1.6rem;
-  }
-
-  input,
-  button {
-    font-size: 1.1rem;
-  }
-
-  .branding h1 {
-    font-size: 3rem;
+  .login {
+    padding: 80px;
   }
 }
